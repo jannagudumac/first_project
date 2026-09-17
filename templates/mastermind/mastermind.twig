@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mastermind{% endblock %}
+
+{% block body %}
+
+<h1>Mastermind</h1>
+
+<form method="post">
+    <label for ="code"> Entrez 4 chiffres : </label>
+    <input
+        type="text"
+        id="code"
+        name="code" {# the controller will use the "name" variable 
+        to fetch the data $code = $request->request->get('code'); #}
+        maxlength="4"
+    >
+    <button type="submit">
+        Tester
+    </button>
+</form>
+{% endblock %}
